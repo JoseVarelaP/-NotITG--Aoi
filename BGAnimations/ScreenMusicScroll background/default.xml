@@ -1,0 +1,4 @@
+<ActorFrame><children>
+	<Layer File="../_shared background/bg" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;customtexturerect,0,0,2,1;texcoordvelocity,0.16,0;zoomx,2" />
+	<Layer File="pix.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y" />
+</children></ActorFrame>

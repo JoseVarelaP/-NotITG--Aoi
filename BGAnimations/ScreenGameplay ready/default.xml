@@ -1,0 +1,3 @@
+<ActorFrame><children>
+	<!-- no animation, needs to be empty so OpenITG doesn't do anything with the default -->
+</children></ActorFrame>

@@ -1,0 +1,5 @@
+<ActorFrame><children>
+	<Layer File="base" OnCommand="zoomtowidth,SCREEN_WIDTH*2;x,SCREEN_CENTER_X;y,SCREEN_BOTTOM-11" />
+	<Layer File="left" OnCommand="x,SCREEN_LEFT+89;y,SCREEN_BOTTOM-11" />
+	<Layer File="right" OnCommand="x,SCREEN_RIGHT-88;y,SCREEN_BOTTOM-11" />
+</children></ActorFrame>

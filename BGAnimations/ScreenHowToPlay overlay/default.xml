@@ -1,0 +1,17 @@
+<ActorFrame><children>
+	<!-- will convert the x and y positions latttttttttter -->
+<Layer File="howtoplay.png" OnCommand="zbuffer,1;z,20;x,SCREEN_CENTER_X+(320-320);y,SCREEN_CENTER_Y+(240-240);diffusealpha,0;zoom,4;sleep,0.0;linear,0.3;diffusealpha,1;zoom,1;sleep,1.8;linear,0.3;zoom,0.5;x,SCREEN_CENTER_X+(170-320);y,SCREEN_CENTER_Y+(60-240)" />
+<Layer File="feet.jpg" OnCommand="zbuffer,1;z,20;x,SCREEN_CENTER_X+(320-320);y,SCREEN_CENTER_Y+(240-240);addx,-640;sleep,2.4;decelerate,0.3;addx,640;sleep,2;linear,0.3;zoomy,0" />
+<Layer File="taphand.gif" OnCommand="rotationy,180;rotationz,270;x,SCREEN_CENTER_X+(290-320);y,SCREEN_CENTER_Y+(110-240);bob;effectperiod,1;effectmagnitude,20,0,0;diffusealpha,0;sleep,6;linear,0;diffusealpha,1;sleep,2;linear,0;diffusealpha,0" />
+<Layer File="tapmessage.png" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(280-240);diffusealpha,0;sleep,6;linear,0;diffusealpha,1;sleep,2;linear,0;diffusealpha,0" />
+<Layer File="taphand.gif" OnCommand="x,SCREEN_CENTER_X+(448-320);y,SCREEN_CENTER_Y+(180-240);bob;effectperiod,1;effectmagnitude,0,20,0;diffusealpha,0;sleep,9.7;linear,0;diffusealpha,1;sleep,1.7;linear,0;diffusealpha,0" />
+<Layer File="tapmessage.png" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(280-240);diffusealpha,0;sleep,9.7;linear,0;diffusealpha,1;sleep,1.7;linear,0;diffusealpha,0" />
+<Layer File="taphand.gif" OnCommand="x,SCREEN_CENTER_X+(512-320);y,SCREEN_CENTER_Y+(180-240);bob;effectperiod,1;effectmagnitude,0,20,0;diffusealpha,0;sleep,12.7;linear,0;diffusealpha,1;sleep,1.7;linear,0;diffusealpha,0" />
+<Layer File="tapmessage.png" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(280-240);diffusealpha,0;sleep,12.7;linear,0;diffusealpha,1;sleep,1.7;linear,0;diffusealpha,0" />
+<Layer File="taphand.gif" OnCommand="x,SCREEN_CENTER_X+(384-320);y,SCREEN_CENTER_Y+(180-240);bob;effectperiod,1;effectmagnitude,0,20,0;diffusealpha,0;sleep,15.7;linear,0;diffusealpha,1;sleep,1.7;linear,0;diffusealpha,0" />
+<Layer File="tapmessage.png" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(280-240);diffusealpha,0;sleep,15.7;linear,0;diffusealpha,1;sleep,1.7;linear,0;diffusealpha,0" />
+<Layer File="jumphands.gif" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(180-240);bob;effectperiod,1;effectmagnitude,0,20,0;diffusealpha,0;sleep,18.7;linear,0;diffusealpha,1;sleep,1.7;linear,0;diffusealpha,0" />
+<Layer File="jumpmessage.png" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(280-240);diffusealpha,0;sleep,18.7;linear,0;diffusealpha,1;sleep,1.7;linear,0;diffusealpha,0" />
+<Layer File="taphand.gif" OnCommand="x,SCREEN_CENTER_X+(548-320);y,SCREEN_CENTER_Y+(110-240);bob;effectperiod,1;effectmagnitude,0,20,0;diffusealpha,0;sleep,22.7;linear,0;diffusealpha,1;sleep,1.7;linear,0;diffusealpha,0" />
+<Layer File="missmessage.png" OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(280-240);diffusealpha,0;sleep,22.7;linear,0;diffusealpha,1;sleep,22.7;linear,0;diffusealpha,0" />
+</children></ActorFrame>

@@ -1,0 +1,20 @@
+<ActorFrame><children>
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<!-- StepMania 3.9's CenterX is 320, and CenterY is 240. So i need to do some math in order to makeout what the actual value is using SCREEN_CENTER_Y first and then the value. Thankfully we can let OpenITG do the actual math. -->
+	<!-- Here it's requesting a Theme file, for that i'll use a command called ThemeFile that is available on Utilities.lua for you to check out! -->
+	
+	<!-- customtexturerect Help
+
+	customtexturerect,left,top,right,bottom;
+		determine what part of the texture to use
+		customtexturerect,0,0,1,1; will display the texture as normal in the rectangle
+		customtexturerect,0,0,2,2; will display 4 copies of the texture (in a 2x2 grid)
+		customtexturerect,0,0,0.5,1; will display the left half of the texture
+		customtexturerect,0.5,0,1,1; will display the right half of the texture
+    -->
+
+	<Layer File="bg" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;customtexturerect,0,0,2,1;texcoordvelocity,0.16,0;zoomx,2" />
+	<Layer File="circle.gif"
+	OnCommand="spin;effectperiod,0.5;x,SCREEN_RIGHT-45;y,SCREEN_CENTER_Y+(-76-240);diffusealpha,0;decelerate,0.5;diffusealpha,1;addy,100" />
+	<Layer File="../ScreenOptions background/time.png" OnCommand="horizalign,right;x,SCREEN_RIGHT;y,SCREEN_CENTER_Y+(24-240);addy,-100;diffusealpha,0;decelerate,0.5;diffusealpha,1;addy,100" />
+</children></ActorFrame>

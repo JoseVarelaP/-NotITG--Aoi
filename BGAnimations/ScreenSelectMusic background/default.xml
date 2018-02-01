@@ -1,0 +1,12 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(.3) end" />
+	
+	<Layer File="../_shared background" />
+	<Layer File="@ThemeFile('MusicWheel highlight.png')" OnCommand="hibernate,0.5;x,SCREEN_CENTER_X+(491-320);y,SCREEN_CENTER_Y+(244-240);diffusealpha,0.5" />
+	<Layer File="data.png" OnCommand="x,SCREEN_CENTER_X+(138-320);y,SCREEN_CENTER_Y+(276-240);bob;effectmagnitude,0,5,0" />
+	<Layer File="score.png" OnCommand="x,SCREEN_CENTER_X+(254-320);y,SCREEN_CENTER_Y+(394-240);diffusealpha,0;decelerate,0.25;diffusealpha,1" />
+
+	<Layer File="@ThemeFile('ScreenSelectMusic difficulty frame p1.gif')" OnCommand="x,SCREEN_CENTER_X+(140-320);y,SCREEN_CENTER_Y+(347-240)" />
+	<Layer File="@ThemeFile('ScreenSelectMusic difficulty frame p1.gif')" OnCommand="x,SCREEN_CENTER_X+(140-320);y,SCREEN_CENTER_Y+(408-240)" />
+</children></ActorFrame>

@@ -1,0 +1,83 @@
+<ActorFrame InitCommand="%function(self)
+local Grade = STATSMAN:GetBestGrade()
+end"><children>
+	<Layer Type="ActorFrame" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y"><children>
+		<!-- This will be the good chunk, as the Bg characters are loaded depending on the best grade. -->
+		<Layer File="aaabg.jpg" Condition="STATSMAN:GetBestGrade() <= 1" />
+		<Layer File="aabg.jpg"  Condition="STATSMAN:GetBestGrade() == 2"  />
+		<Layer File="abg.jpg"   Condition="STATSMAN:GetBestGrade() == 3"   />
+		<Layer File="bbg.jpg"   Condition="STATSMAN:GetBestGrade() == 4"   />
+		<Layer File="cbg.jpg"   Condition="STATSMAN:GetBestGrade() == 5"   />
+		<Layer File="dbg.jpg"   Condition="STATSMAN:GetBestGrade() >= 6"   />
+		<!-- Will think about the extras later
+			<Layer File="exbg.jpg"     Condition="IsFinalStage() and GetBestGrade() <= Grade('AA')"   />
+			<Layer File="omesbg.jpg"   Condition="IsExtraStage() and GetBestGrade() <= Grade('AA')"   />
+		-->
+	</children></Layer>
+
+	<!-- Additional things that go on top -->
+	<Layer File="../_black.png" OnCommand="zoomtowidth,244;zoomtoheight,144;x,SCREEN_CENTER_X+(127-320);y,SCREEN_CENTER_Y+(198-240);diffusealpha,0;hibernate,0.4;linear,0.2;diffusealpha,0.3" />
+
+	<Layer File="../_black.png" OnCommand="zoomtowidth,244;zoomtoheight,144;x,SCREEN_CENTER_X+(513-320);y,SCREEN_CENTER_Y+(198-240);diffusealpha,0;hibernate,0.4;linear,0.2;diffusealpha,0.3" />
+
+	<Layer File="bars.gif" OnCommand="diffusealpha,0;x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(365-240);hibernate,0.3;zoomx,2;linear,0.2;zoomx,1;diffusealpha,1" />
+
+	<Layer File="box.gif" OnCommand="diffusealpha,0;x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(198-240);hibernate,0.1;linear,0.2;diffusealpha,1" />
+
+	<Layer File="../_shared background/circle.gif"
+	OnCommand="spin;effectperiod,0.5;y,SCREEN_CENTER_Y+(-76-240);x,SCREEN_RIGHT-45;diffusealpha,0;decelerate,0.5;diffusealpha,1;addy,100" />
+
+	<Layer File="../ScreenGameplay cleared/left.jpg"
+	OnCommand="x,SCREEN_CENTER_X+(160-320);y,SCREEN_CENTER_Y;diffusealpha,1;accelerate,0.3;addx,-320;addy,360;diffusealpha,0;" />
+
+	<Layer File="../ScreenGameplay cleared/right.jpg"
+	OnCommand="x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y;diffusealpha,1;accelerate,0.3;addx,320;addy,360;diffusealpha,0;" />
+
+	<Layer File="../ScreenGameplay cleared/eval.png"
+	OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;decelerate,0.3;diffusealpha,1;zoomx,2;zoomy,0;" />
+
+</children></ActorFrame>
+<!--
+[BGAnimation]
+
+[Layer1]
+File=aabg.jpg
+Type=0
+Condition=GetBestGrade() == Grade("AA")
+
+[Layer2]
+File=aaabg.jpg
+Type=0
+Condition=GetBestGrade() <= Grade("AAA")
+
+[Layer3]
+File=abg.jpg
+Type=0
+Condition=GetBestGrade() == Grade("A")
+
+[Layer4]
+File=bbg.jpg
+Type=0
+Condition=GetBestGrade() == Grade("B")
+
+[Layer5]
+File=cbg.jpg
+Type=0
+Condition=GetBestGrade() == Grade("C")
+
+[Layer6]
+File=dbg.jpg
+Type=0
+Condition=GetBestGrade() >= Grade("D")
+
+[Layer7]
+File=exbg.jpg
+Type=0
+Condition=IsFinalStage() and GetBestGrade() <= Grade("AA")
+
+[Layer8]
+File=omesbg.jpg
+Type=0
+Condition=IsExtraStage() and GetBestGrade() <= Grade("AA")
+
+-->

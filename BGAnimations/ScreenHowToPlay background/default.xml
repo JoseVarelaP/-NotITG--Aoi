@@ -1,0 +1,8 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(25) end" />
+
+	<!-- Just import some extra animations, they loop. -->
+	<Layer File="../_shared background" />
+	<Layer File="bar.gif" OnCommand="x,SCREEN_CENTER_X+(479-320);y,SCREEN_CENTER_Y+(39-240)" />
+</children></ActorFrame>

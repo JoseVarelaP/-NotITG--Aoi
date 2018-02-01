@@ -1,0 +1,7 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(0.8) end" />
+
+	<!-- This will load another command with an existing animation. -->
+	<Layer File="../_fade out" />
+</children></ActorFrame>

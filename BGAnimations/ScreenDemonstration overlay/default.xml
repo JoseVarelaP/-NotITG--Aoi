@@ -1,0 +1,11 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(15) end" />
+
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<!-- StepMania 3.9's CenterX is 320, and CenterY is 240. So i need to do some math in order to makeout what the actual value is using SCREEN_CENTER_Y first and then the value. Thankfully we can let OpenITG do the actual math. -->
+	<Layer File="demo.gif"
+	OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(400-240);queuecommand,Loop"
+	LoopCommand="diffusealpha,0;zoom,1.3;decelerate,0.5;diffusealpha,1;zoom,1;accelerate,0.5;diffusealpha,0;zoom,1.3;queuecommand,Loop" />
+	
+</children></ActorFrame>

@@ -1,0 +1,6 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(2) end" />
+
+	<Layer File="over.jpg" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;zoom,1.3;diffusealpha,0;decelerate,0.5;zoom,1;diffusealpha,1;" />
+</children></ActorFrame>

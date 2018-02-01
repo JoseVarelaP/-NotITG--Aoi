@@ -1,0 +1,5 @@
+<ActorFrame><children>
+	<Layer File="_shared background/circle.gif"
+	OnCommand="spin;effectperiod,0.5;x,SCREEN_RIGHT-45;y,SCREEN_CENTER_Y+(-76-240);diffusealpha,0;decelerate,0.5;diffusealpha,1;addy,100" />
+	<Layer File="ScreenOptions background/time.png" OnCommand="horizalign,right;x,SCREEN_RIGHT;y,SCREEN_CENTER_Y+(24-240);addy,-100;diffusealpha,0;decelerate,0.5;diffusealpha,1;addy,100" />
+</children></ActorFrame>

@@ -1,0 +1,15 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(.3) end" />
+
+	<Layer File="../_shared background/bg" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;customtexturerect,0,0,2,1;texcoordvelocity,0.16,0;zoomx,2" />
+	<Layer File="bars.png" OnCommand="x,SCREEN_CENTER_X+(316-320);y,SCREEN_CENTER_Y+(261-240);diffusealpha,0;linear,0.2;diffusealpha,1" />
+	<Layer File="bars.png" OnCommand="hibernate,0.05;x,SCREEN_CENTER_X+(316-320);y,SCREEN_CENTER_Y+(289-240);diffusealpha,0;linear,0.1;diffusealpha,1" />
+	<Layer File="bars.png" OnCommand="hibernate,0.1;x,SCREEN_CENTER_X+(316-320);y,SCREEN_CENTER_Y+(317-240);diffusealpha,0;linear,0.1;diffusealpha,1" />
+	<Layer File="bars.png" OnCommand="hibernate,0.15;x,SCREEN_CENTER_X+(316-320);y,SCREEN_CENTER_Y+(345-240);diffusealpha,0;linear,0.1;diffusealpha,1" />
+	<Layer File="bars.png" OnCommand="hibernate,0.2;x,SCREEN_CENTER_X+(316-320);y,SCREEN_CENTER_Y+(373-240);diffusealpha,0;linear,0.1;diffusealpha,1" />
+	<Layer File="bars.png" OnCommand="hibernate,0.25;x,SCREEN_CENTER_X+(316-320);y,SCREEN_CENTER_Y+(401-240);diffusealpha,0;linear,0.1;diffusealpha,1" />
+	<Layer File="by.gif" OnCommand="hibernate,0.35;x,SCREEN_CENTER_X+(316-320);y,SCREEN_CENTER_Y+(455-240);diffusealpha,0;linear,0.1;diffusealpha,1" />
+	<Layer File="title.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(127-240);diffusealpha,0;linear,0.3;diffusealpha,1" />
+	<Layer File="text.gif" OnCommand="hibernate,0.35;x,SCREEN_CENTER_X+(92-320);y,SCREEN_CENTER_Y+(342-240);diffusealpha,0;linear,0.2;diffusealpha,1" />
+</children></ActorFrame>

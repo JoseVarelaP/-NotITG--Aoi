@@ -1,0 +1,18 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(.5) end" />
+
+	<!-- Just import some extra animations, they loop. -->
+	<Layer File="../_shared background" />
+	<Layer File="back.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;diffusealpha,0;zoom,1.5;decelerate,0.2;zoom,1;diffusealpha,1" />
+</children></ActorFrame>
+[BGAnimation]
+LengthSeconds=0.5
+
+[Layer1]
+Import=../_shared background
+
+[Layer2]
+File=back.png
+Type=0
+Command=diffusealpha,0;zoom,1.5;decelerate,0.2;zoom,1;diffusealpha,1

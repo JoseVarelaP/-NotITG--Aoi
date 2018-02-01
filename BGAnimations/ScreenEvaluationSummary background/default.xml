@@ -1,0 +1,15 @@
+<ActorFrame><children>
+
+	<Layer File="../ScreenEvaluationStage background/aabg.jpg" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y" />
+
+	<Layer File="../_black.png" OnCommand="zoomtowidth,244;zoomtoheight,144;x,SCREEN_CENTER_X+(127-320);y,SCREEN_CENTER_Y+(198-240);diffusealpha,0;hibernate,0.4;linear,0.2;diffusealpha,0.3" />
+
+	<Layer File="../_black.png" OnCommand="zoomtowidth,244;zoomtoheight,144;x,SCREEN_CENTER_X+(513-320);y,SCREEN_CENTER_Y+(198-240);diffusealpha,0;hibernate,0.4;linear,0.2;diffusealpha,0.3" />
+
+	<Layer File="../ScreenEvaluationStage background/bars.gif" OnCommand="diffusealpha,0;x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(365-240);hibernate,0.3;zoomx,2;linear,0.2;zoomx,1;diffusealpha,1" />
+
+	<Layer File="../ScreenEvaluationStage background/box.gif" OnCommand="diffusealpha,0;x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(198-240);hibernate,0.1;linear,0.2;diffusealpha,1" />
+
+	<Layer File="../_shared background/circle.gif" OnCommand="spin;effectperiod,0.5;y,SCREEN_CENTER_Y+(-76-240);x,SCREEN_RIGHT-45;diffusealpha,0;decelerate,0.5;diffusealpha,1;addy,100" />
+
+</children></ActorFrame>

@@ -1,0 +1,11 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<!-- This will play a sound! -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) AudioPlay('_swoosh.ogg') self:sleep(0.25) end" />
+
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<!-- StepMania 3.9's CenterX is 320, and CenterY is 240. So i need to do some math in order to makeout what the actual value is using SCREEN_CENTER_Y first and then the value. Thankfully we can let OpenITG do the actual math. -->
+	<!-- Here it's requesting a Theme file, for that i'll use a command called ThemeFile that is available on Utilities.lua for you to check out! -->
+	<Layer File="../fader.jpg" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;zoomy,0;zoomx,1.4;diffusealpha,0;decelerate,0.25;diffusealpha,1;zoom,2" />
+	<Layer File="../ScreenTitleMenu background/title.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;zoomy,0;zoomx,0.7;diffusealpha,0;decelerate,0.25;diffusealpha,1;zoom,1" />
+</children></ActorFrame>

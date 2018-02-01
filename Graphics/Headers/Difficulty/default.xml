@@ -1,0 +1,33 @@
+<ActorFrame><children>
+	<Layer Type="ActorFrame" OnCommand="y,62"><children>
+		<Layer File="../Base.png" OnCommand="%function(self)
+		self:horizalign('left')
+		self:x(SCREEN_LEFT+303)
+		function WidthScreenForDifficultyScreen()
+	
+			local AR = PREFSMAN:GetPreference( 'DisplayAspectRatio' )
+				if AR > 1.000000 and AR < 1.333332 then
+					return 56
+				elseif AR > 1.333333 and AR < 1.599999 then
+					return 56
+				elseif AR > 1.600000 and AR < 1.699999 then
+					return 119
+				elseif AR > 1.777777 and AR < 2.666666 then
+					return 162
+				elseif AR >= 2.666667 then
+					return 376
+				else
+					return 376
+			end
+		end
+
+		self:zoomtowidth( WidthScreenForDifficultyScreen() )
+		self:y(-.25)
+		end" />
+		<Layer File="left.png" OnCommand="horizalign,left;x,SCREEN_LEFT;" />
+		<Layer File="Hill.png" OnCommand="horizalign,right;x,SCREEN_CENTER_X+145;y,-.75" />
+		<Layer File="Right.png" OnCommand=";horizalign,left;x,SCREEN_CENTER_X+145;y,-0.75;zoomtowidth,SCREEN_WIDTH" />
+		<Layer File="TimeText.png" OnCommand=";horizalign,right;x,SCREEN_RIGHT-73;y,-27" />
+		<Layer File="RightText.png" OnCommand="horizalign,right;x,SCREEN_RIGHT;y,6" />
+	</children></Layer>
+</children></ActorFrame>

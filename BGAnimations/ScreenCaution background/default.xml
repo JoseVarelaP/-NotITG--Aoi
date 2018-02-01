@@ -1,0 +1,20 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<!-- This will play a sound! -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(0.9) end" />
+
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<!-- StepMania 3.9's CenterX is 320, and CenterY is 240. So i need to do some math in order to makeout what the actual value is using SCREEN_CENTER_Y first and then the value. Thankfully we can let OpenITG do the actual math. -->
+	<Layer File="text.png"
+	OnCommand="hibernate,0.1;x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(220-240);diffusealpha,0;zoomx,0;decelerate,0.2;diffusealpha,1;zoomx,1" />
+
+	<Layer File="../flash.png"
+	OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(220-240);diffusealpha,0;decelerate,0.15;zoomy,.15;zoomx,2;diffusealpha,1;accelerate,0.1;zoomx,2.5;zoomy,0;diffusealpha,0.5" />
+
+	<Layer File="../_white.bmp" OnCommand="hibernate,0.1;x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(232-240);diffusealpha,0;zoomx,0;decelerate,0.2;diffusealpha,1;zoomx,150" />
+
+	<Layer File="text2.png" OnCommand="hibernate,0.3;x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(239-240);diffusealpha,0;zoomx,0;decelerate,0.2;diffusealpha,1;zoomx,1" />
+
+	<Layer File="../flash.png" OnCommand="hibernate,0.2;x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(239-240);diffusealpha,0;zoom,.5;decelerate,0.15;zoomy,.7;zoomx,1;diffusealpha,1;accelerate,0.1;zoomx,1.25;zoomy,0;diffusealpha,0.5" />
+
+</children></ActorFrame>

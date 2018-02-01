@@ -1,0 +1,8 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(0.3) end" />
+
+	<Layer File="left.jpg" OnCommand="x,SCREEN_CENTER_X+(-160-320);y,SCREEN_CENTER_Y+(600-240);diffusealpha,0;decelerate,0.3;diffusealpha,1;x,SCREEN_CENTER_X+(160-320);y,SCREEN_CENTER_Y+(240-240)" />
+	<Layer File="right.jpg" OnCommand="x,SCREEN_CENTER_X+(800-320);y,SCREEN_CENTER_Y+(600-240);diffusealpha,0;decelerate,0.3;diffusealpha,1;x,SCREEN_CENTER_X+(480-320);y,SCREEN_CENTER_Y+(240-240)" />
+	<Layer File="eval.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;diffusealpha,0;zoomx,2;zoomy,0;decelerate,0.3;diffusealpha,1;zoom,1" />
+</children></ActorFrame>

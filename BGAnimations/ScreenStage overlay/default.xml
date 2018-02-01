@@ -1,0 +1,90 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(1.75) end" />
+
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<!-- StepMania 3.9's CenterX is 320, and CenterY is 240. So i need to do some math in order to makeout what the actual value is using SCREEN_CENTER_Y first and then the value. Thankfully we can let OpenITG do the actual math. -->
+	<Layer File="../_shared background/bg" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;customtexturerect,0,0,2,1;texcoordvelocity,0.16,0;zoomx,2" />
+	<Layer File="../stars.jpg" Condition="GAMESTATE:GetCurrentSong():GetDisplayMainTitle() == 'SCREAM SQUAD -for X-' or  GAMESTATE:GetCurrentSong():GetDisplayMainTitle() == 'MEI -for X-'" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;customtexturerect,0,0,1,1;texcoordvelocity,0.12,0" />
+
+	<Layer File="../STAGE/b-back.gif" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+(361-240);diffusealpha,0;decelerate,0.2;diffusealpha,0.4;sleep,1.3;accelerate,0.25;diffusealpha,0" />
+	<Layer File="@'stage '..GetStageText()" OnCommand="horizalign,left;x,SCREEN_CENTER_X+(14-320);y,SCREEN_CENTER_Y+(217-240);addx,-200;diffusealpha,0;decelerate,0.3;diffusealpha,0.4;addx,200;sleep,1.2;accelerate,0.25;diffusealpha,0" />
+
+	<Layer File="../STAGE/stuff.png" OnCommand="x,SCREEN_CENTER_X;addx,-200;y,SCREEN_CENTER_Y+(347-240);diffusealpha,0;decelerate,0.3;diffusealpha,1;addx,200;sleep,1.2;accelerate,0.25;diffusealpha,0" />
+
+	<Layer File="../startsov.png" Condition="GAMESTATE:GetCurrentSong():GetDisplayMainTitle() == 'SCREAM SQUAD -for X-' or  GAMESTATE:GetCurrentSong():GetDisplayMainTitle() == 'MEI -for X-'" OnCommand="x,SCREEN_CENTER_X;addx,-200;y,SCREEN_CENTER_Y+(335-240);diffusealpha,0;decelerate,0.3;diffusealpha,1;addx,200;sleep,1.2;accelerate,0.25;diffusealpha,0" />
+
+	<Layer File="../STAGE/ring.png" OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;zoom,0;diffusealpha,0;accelerate,0.7;zoom,10;diffusealpha,1;hibernate,1.05" />
+	<Layer File="../STAGE/arrow.gif" OnCommand="x,SCREEN_CENTER_X+(383-320);y,SCREEN_CENTER_Y+(202-240);diffusealpha,0.7;hibernate,0.2;zoom,0;decelerate,0.5;zoom,1;addx,250;addy,-250" />
+	<Layer File="../STAGE/arrow.gif" OnCommand="x,SCREEN_CENTER_X+(433-320);y,SCREEN_CENTER_Y+(252-320);diffusealpha,0.7;hibernate,0.4;zoom,0;decelerate,0.6;zoom,0.5;addx,270;addy,-270" />
+
+	<Layer File="songbanner"
+		OnCommand="x,SCREEN_CENTER_X+(156-320);y,SCREEN_CENTER_Y+(382-240);zoomtowidth,256;zoomtoheight,80;addx,-200;diffusealpha,0;decelerate,0.3;diffusealpha,1;addx,200;sleep,1.2;accelerate,0.25;diffusealpha,0" />
+
+	<Layer File="songbackground"
+		OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;hibernate,1.5;zoomtowidth,700;zoomtoheight,0;diffusealpha,0;accelerate,0.25;diffusealpha,1;zoomtoheight,480;zoomtowidth,640" />
+
+</children></ActorFrame>
+[BGAnimation]
+LengthSeconds=1.75
+
+[Layer1]
+File=../_shared background/bg.jpg
+Type=3
+TileVelocityX=50
+TilesStartY=240
+
+[Layer2]
+File=../stars.jpg
+Type=3
+TileVelocityX=75
+TilesStartY=240
+Condition=CurSong() == Song("SCREAM SQUAD -for X-") or CurSong() == Song("MEI -for X-")
+
+[Layer3]
+File=../STAGE/b-back.gif
+Type=0
+Command=y,361;diffusealpha,0;decelerate,0.2;diffusealpha,0.4;sleep,1.3;accelerate,0.25;diffusealpha,0
+
+[Layer4]
+File=num.png
+Type=0
+Command=horizalign,left;x,14;y,217;addx,-200;diffusealpha,0;decelerate,0.3;diffusealpha,0.4;addx,200;sleep,1.2;accelerate,0.25;diffusealpha,0
+
+[Layer5]
+File=../STAGE/stuff.png
+Type=0
+Command=addx,-200;y,347;diffusealpha,0;decelerate,0.3;diffusealpha,1;addx,200;sleep,1.2;accelerate,0.25;diffusealpha,0
+
+[Layer6]
+File=../starsov.png
+Type=0
+Command=addx,-200;y,335;diffusealpha,0;decelerate,0.3;diffusealpha,1;addx,200;sleep,1.2;accelerate,0.25;diffusealpha,0
+Condition=CurSong() == Song("SCREAM SQUAD -for X-") or CurSong() == Song("MEI -for X-")
+
+[Layer7]
+File=../STAGE/ring.png
+Type=0
+Command=zoom,0;diffusealpha,0;accelerate,0.7;zoom,10;diffusealpha,1;hibernate,1.05
+
+[Layer8]
+File=../STAGE/arrow.gif
+Type=0
+Command=x,383;y,202;diffusealpha,0.7;hibernate,0.2;zoom,0;decelerate,0.5;zoom,1;addx,250;addy,-250
+CommandRepeatSeconds=0.7
+
+[Layer9]
+File=../STAGE/arrow.gif
+Type=0
+Command=x,433;y,252;diffusealpha,0.7;hibernate,0.4;zoom,0;decelerate,0.6;zoom,0.5;addx,270;addy,-270
+CommandRepeatSeconds=1
+
+[Layer10]
+File=songbanner
+Type=0
+Command=x,156;y,382;zoomtowidth,256;zoomtoheight,80;addx,-200;diffusealpha,0;decelerate,0.3;diffusealpha,1;addx,200;sleep,1.2;accelerate,0.25;diffusealpha,0
+
+[Layer11]
+File=songbackground
+Type=0
+Command=hibernate,1.5;zoomtowidth,700;zoomtoheight,0;diffusealpha,0;accelerate,0.25;diffusealpha,1;zoomtoheight,480;zoomtowidth,640

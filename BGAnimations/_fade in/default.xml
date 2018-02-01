@@ -1,0 +1,9 @@
+<ActorFrame><children>
+	<!-- This will act as the BGAnimation LengthSeconds command. -->
+	<Layer Type="Quad" OnCommand="%function(self) self:zoom(0) self:sleep(0.3) end" />
+
+	<!-- OpenITG's Center isn't the ACTUAL center; it's the top left corner, so we need to center it again. -->
+	<!-- We want that stretch to happen in XML, so we need to manually set a setzoom to make it happen, because that's how it's made. -->
+	<!-- Why is SCREEN_WIDTH and SCREEN_HEIGHT on *2? It's because of how SM handles sizing to 'FullScreen', there's a little gap that appears if you just let it on normal SCREEN_WIDTH/HEIGHT, and applying double the size fixes it. -->
+	<Layer File="../_black.png" OnCommand="zoomto,SCREEN_WIDTH*2,SCREEN_HEIGHT*2;diffusealpha,1;linear,0.3;diffusealpha,0" />
+</children></ActorFrame>
